@@ -1,0 +1,107 @@
+/* mobile & tablet */
+@media (max-width: 1023px){
+    :root{
+        --navbar-height: 0px;
+        --header-height: 68px;
+    }
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+    .header{
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .header__cart{
+        width: 80px;
+        text-align: right;
+    }
+    .app__container{
+        margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
+    }
+    .header__sort-bar{
+        display: flex;
+    }
+    .app__content{
+        padding-top: 8px;
+    }
+    .mobile-category{
+        display: block;
+    }
+
+}
+/* tablet */
+@media  (min-width:740px) and (max-width: 1023px){
+    .hide-on-tablet{
+        display: none;
+    }
+}
+/* mobile */
+@media (max-width: 739px){
+    .hide-on-mobile{
+        display: none;
+    }
+    .header-with-search{
+        justify-content: space-between;
+    }
+    .header__logo{
+        width: unset;
+    }
+    .header__cart{
+        width: unset;
+    }
+    .header__search{
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        height: 46px;
+        box-shadow: 0 1px 1px #e5e5e5;
+        z-index: 2;
+        padding: 0 16px;
+        animation: mobile 0.3s linear;
+        display: none;
+    }
+    .header__search-checkbox:checked ~ .header__search{
+        display: flex;
+    }
+    @keyframes mobile{
+        from{
+            top: calc(var(--header-height) / 2);
+            opacity: 0;
+        }
+        to{
+            top: var(--header-height);
+            opacity: 1;
+        }
+    }
+    .header__search-history{
+        position: fixed;
+        top: calc(var(--header-height) + var(--header-sort-bar-height));
+        right: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+    .pagination-item{
+        margin: 0;
+    }
+    .pagination-item__link{
+        font-size: 1.6rem;
+        min-width: 36px;
+    }
+    .header__mobile-search{
+        display: block;
+    }
+    .header__logo-img{
+        width: 110px;
+    }
+    .footer__content{
+        padding: 0 16px;
+    }
+    .footer__dowload-apps-link{
+        padding: 8px 0;
+    }
+}

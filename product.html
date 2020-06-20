@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="shortcut icon" type="image/png" href="./images/logo.png" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./fa/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+    <header class="header header__change">
+        <div class="grid wide">
+            <nav class="header__navbar hide-on-mobile-tablet">
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item header__navbar-item--has-qr  header__navbar-item--separate">
+                        Vào cửa hàng trên ứng dụng của tui
+                        <!-- Header QR Code -->
+                        <div class="header__qr">
+                            <img src="./images/logo-qr.png" alt="QR code" class="header__qr-img">
+                            <div class="header__qr-apps">
+                                <a href=""><img src="./images/qr-gg.png" alt="Google play"
+                                        class="header__qr-dowload-img"></a>
+                                <a href=""><img src="./images/qr-appstore.png" alt="App store"
+                                        class="header__qr-dowload-img"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__navbar-item">
+                        <span class="header__navbar-item-span">Kết nối</span>
+                        <a href="" class="header__navbar-icon-link">
+                            <i class="header__navbar-icon fab fa-facebook"></i>
+                        </a>
+                        <a href="" class="header__navbar-icon-link">
+                            <i class="header__navbar-icon fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item">
+                        <a href="" class="header__navbar-item-link"><i class="header__navbar-icon far fa-bell"></i>Thông
+                            báo</a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="" class="header__navbar-item-link"><i
+                                class="header__navbar-icon far fa-question-circle"></i>Trợ giúp</a>
+                    </li>
+                    <li
+                        class="header__navbar-item header__navbar-item--strong header__navbar-item--separate header__navbar-item--register">
+                        Đăng ký
+                    </li>
+                    <li class="header__navbar-item header__navbar-item--strong header__navbar-item--logIn">Đăng nhập
+                    </li>
+                </ul>
+            </nav>
+            <!-- header with search -->
+            <div class="header-with-search">
+                <label for="mobile-search-checkbox" class="header__mobile-search">
+                    <i class="header__mobile-search-icon fas fa-search"></i>
+                </label>
+                <div class="header__logo hide-on-tablet">
+                    <a href="./index.html">
+                        <img src="./images/logo.png" alt="logo" width="160px" ; height="80px">
+                    </a>
+                </div>
+
+                <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+
+                <div class="header__search ">
+                    <div class="header__search-input-wrap">
+                        <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+
+                        <!-- search-history -->
+                        <div class="header__search-history">
+                            <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                            <ul class="header__search-history-list">
+                                <li class="header__search-history-item">
+                                    <a href="">Tủ lạnh</a>
+                                </li>
+                                <li class="header__search-history-item">
+                                    <a href="">Quạt điện</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header__search-select">
+                        <span class="header__search-select-label">Trong Shop</span>
+                        <i class="header__search-select-icon fas fa-angle-down"></i>
+
+                        <ul class="header__search-option">
+                            <li class="header__search-option-item">
+                                <span>Trong Shop</span>
+                                <i class="fas fa-check"></i>
+                            </li>
+                            <li class="header__search-option-item">
+                                <span>Ngoài Shop</span>
+                                <i class="fas fa-check"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="header__search-btn">
+                        <i class="header__search-btn-icon fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="header__cart">
+                    <i class="header__cart-icon fas fa-shopping-cart">
+                        <div class="header__cart-no-product">
+                            <img class="header__cart-img" src="./images/no-cart.png" alt="">
+                            <h2>Chưa có sản phẩm</h2>
+                        </div>
+                    </i>
+                </div>
+            </div>
+        </div>
+        <ul class="header__sort-bar">
+            <li class="header__sort-item">
+                <a href="" class="header__sort-link">Liên quan</a>
+            </li>
+            <li class="header__sort-item header__sort-item--active">
+                <a href="" class="header__sort-link">Mới nhất</a>
+            </li>
+            <li class="header__sort-item">
+                <a href="" class="header__sort-link">Bán chạy</a>
+            </li>
+            <li class="header__sort-item">
+                <a href="" class="header__sort-link">Giá</a>
+            </li>
+        </ul>
+        <!-- modal -->
+        <div class="header__overlay"></div>
+        <!-- header register -->
+        <div class="header__navbar-register header__navbar-form">
+            <div class="register__content">
+                <div class="register__heading">
+
+                    <div class="register__heading-time">
+                        <h2 class="register__text-one">Đăng ký</h2>
+                    </div>
+                    <div class="register__heading-time register__heading-logIn">
+                        <h2 class="register__text-two">Bạn đã có tài khoản?</h2>
+                        <a href="" class="register__logIn">Đăng nhập</a>
+                    </div>
+                </div>
+                <div class="register__phone">
+                    <input type="text" class="register__numberPhone" placeholder="Số điện thoại">
+                </div>
+                <div class="register__next">
+                    <p>TIẾP THEO</p>
+                </div>
+                <div class="register__close">QUAY LẠI</div>
+                <div class="register__line">
+                    <p>HOẶC</p>
+                </div>
+                <div class="register__link">
+                    <div class="register__facebook register__link-item">
+                        <i class="fab fa-facebook"></i>
+                        <a href="https://www.facebook.com/">Facebook</a>
+                    </div>
+                    <div class="register__google register__link-item"><i class="fab fa-google"></i>
+                        <a href="https://www.google.com/">Google</a>
+                    </div>
+                </div>
+                <div class="register__accept">
+                    <p>Bằng việc đăng kí, bạn đã đồng ý với IR về</p> <a href="#">Điều khoản dịch vụ</a> &
+                    <a href="#">Chính sách bảo mật</a>
+                </div>
+
+            </div>
+        </div>
+        <!-- header log in -->
+        <div class="header__navbar-logIn  header__navbar-form">
+            <div class="logIn__content">
+                <div class="logIn__heading">
+                    <div class="logIn__heading-item">
+                        <h2 class="logIn__text-one">Đăng nhập</h2>
+                    </div>
+                    <div class="logIn__heading-item logIn__heading-register">
+                        <h2 class="logIn__text-two">Bạn mới biết đến Shopee</h2>
+                        <a href="" class="logIn__register">Đăng ký</a>
+                    </div>
+                </div>
+                <div class="logIn__user">
+                    <input id="txtdn" type="text" class="logIn__id" placeholder="Email/Số điện thoại/Tên đăng nhập">
+                    <input id="txtmatkhau" type="password" class="logIn__passWord" placeholder="Mật khẩu">
+                </div>
+                <div class="logIn__join">
+                    <p>ĐĂNG NHẬP</p>
+                </div>
+                <div class="logIn__close">QUAY LẠI</div>
+                <div class="logIn__rememberPass">
+                    <a href="#" class="logIn__remember">Quên mật khẩu</a>
+                    <a href="#" class="logIn__SMS">Đăng nhập với SMS</a>
+                </div>
+
+                <div class="logIn__line">
+                    <p>HOẶC</p>
+                </div>
+                <div class="logIn__link">
+                    <div class="register__facebook logIn__link-item">
+                        <i class="fab fa-facebook"></i>
+                        <a href="https://www.facebook.com/">Facebook</a>
+                    </div>
+                    <div class="register__google logIn__link-item"><i class="fab fa-google"></i>
+                        <a href="https://www.google.com/">Google</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+
+    <div class="app__container app-content">
+        <div class="home-product-content">
+            <ul class="home-product__list">
+                <li class="home-product__item">
+                    <a href="" class="home-product__link">Trang chủ</a>
+                </li>
+                <li class="home-product__item">
+                    <i class="home-product-icon fas fa-angle-right"></i>
+                    <a href="" class="home-product__link">Điện máy</a>
+                </li>
+                <li class="home-product__item">
+                    <i class="home-product-icon fas fa-angle-right"></i>
+                    Sony Android TV 4K 49
+                </li>
+            </ul>
+        </div>
+        <div class="grid wide">
+            <div class="row sm-gutter product__content">
+                <div class="col l-5">
+                    <div class="product-info__item">
+                        <div class="product-info__item-img--big">
+                            <img src="./images/1.jpg" alt="" id="img-main">
+                        </div>
+                        <div class="product-info__item-img--small">
+                            <div class="product-info__item-show"><img src="./images/1.1.jpg" alt="" class="img-child">
+                            </div>
+                            <div class="product-info__item-show"><img src="./images/1.2.jpg" alt="" class="img-child">
+                            </div>
+                            <div class="product-info__item-show"><img src="./images/1.3.jpg" alt="" class="img-child">
+                            </div>
+                            <div class="product-info__item-show"><img src="./images/1.4.jpg" alt="" class="img-child">
+                            </div>
+                            <div class="product-info__item-show"><img src="./images/1.5.jpg" alt="" class="img-child">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-interact">
+                        <div class="product-interact__share">
+                            <p class="product-interact__text">Chia sẻ:</p>
+                            <a href="#" class="product-interact__icon-link"><i
+                                    class="product-interact__icon fab fa-facebook-messenger"></i></a>
+                            <a href="#" class="product-interact__icon-link"><i
+                                    class="product-interact__icon fab fa-facebook"></i></a>
+                            <a href="#" class="product-interact__icon-link"><i
+                                    class="product-interact__icon fab fa-google-plus"></i></a>
+                            <a href="#" class="product-interact__icon-link"><i
+                                    class="product-interact__icon fab fa-pinterest"></i></a>
+                            <a href="#" class="product-interact__icon-link"><i
+                                    class="product-interact__icon fab fa-twitter"></i></a>
+                        </div>
+                        <div class="product-interact__like">
+                            <i class="product-interact__icon far fa-heart"></i>
+                            <p class="product-interact__text product-interact__text--like">Đã thích(1,1k)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l-7">
+                    <div class="product-info__item product__content">
+                        <div class="product-info__item-name">
+                            <svg width="34" height="17" class="product__item-logo">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path
+                                        d="M.796 2.905A2 2 0 0 1 2.798.911h28.995a2 2 0 0 1 2.003 1.994v12.012a2 2 0 0 1-2.003 1.994H2.798a2 2 0 0 1-2.002-1.994V2.905z"
+                                        fill="#D0011B"></path>
+                                    <g fill="#fff">
+                                        <path
+                                            d="M25.81 10.976h.002c0 .823.31 1.359.931 1.609v.002a.847.847 0 0 1-.63 1.572l-.002.003c-1.332-.464-1.998-1.51-1.998-3.141h.004V4.856a.846.846 0 0 1 1.693 0v6.12zM29.516 10.976h.003c0 .823.31 1.359.93 1.609v.002a.847.847 0 0 1-.63 1.572l-.002.003c-1.332-.464-1.998-1.51-1.998-3.141h.004V4.856a.846.846 0 1 1 1.693 0v6.12zM20.78 7.574c.011-.413.418-.82.918-.82.507 0 .918.418.918.837V13.3c0 .419-.41.826-.918.826-.446 0-.818-.315-.9-.676a3.57 3.57 0 0 1-2.215.768c-1.999 0-3.689-1.644-3.689-3.673 0-2.028 1.69-3.756 3.689-3.756.826 0 1.588.295 2.197.786zm-.08 2.919a2.074 2.074 0 1 0-4.146 0 2.072 2.072 0 1 0 4.145 0z">
+                                        </path>
+                                        <path
+                                            d="M3.8 4.645a.824.824 0 0 1 .55-.759c.478-.17.94.18 1.138.587.578 1.19 1.772 2.121 3.374 2.144 1.602.022 2.436-.96 3.057-2.124.215-.403.708-.835 1.277-.607.386.155.539.45.532.732.003.03.005.06.005.09v8.612a.846.846 0 1 1-1.693 0V7.02c-.86.813-1.891 1.333-3.206 1.311a5.477 5.477 0 0 1-3.346-1.237v6.225a.846.846 0 0 1-1.693 0V4.74c0-.032.002-.064.006-.096z"
+                                            fill-rule="nonzero"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <p class="product__item-text"> Sony Android TV 4K 49</p>
+                        </div>
+                    </div>
+                    <div class="product__rating">
+                        <div class="product__rating-item product__rating-number-star">
+                            <a href="#" class="product__rating-link">4.8</a>
+                            <i class="product__rating-star home-product-item__star--gold fas fa-star"></i>
+                            <i class="product__rating-star home-product-item__star--gold fas fa-star"></i>
+                            <i class="product__rating-star home-product-item__star--gold fas fa-star"></i>
+                            <i class="product__rating-star fas fa-star"></i>
+                            <i class="product__rating-star fas fa-star"></i>
+                        </div>
+                        <div class="product__rating-item product__rating-evaluate">
+                            <a href="#" class=" product__rating-link">747</a>
+                            <span class=" product__rating-text">Đánh giá</span>
+                        </div>
+                        <div class="product__rating-item product__rating-sold">
+                            <span class="product__rating-sold-num">
+                                1,8k
+                            </span>
+                            <span class="product__rating-sold-text">
+                                Đã bán
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="product__price">
+                        <div class="product__price-content">
+                            <span class="product__price-item product__price-old">
+                                15.400.000₫
+                            </span>
+                            <span class="product__price-item product__price-current">
+                                12.400.000₫
+                            </span>
+                            <span class="product__price-item product__price-discout">
+                                20% GIẢM
+                            </span>
+                        </div>
+                        <div class="product__price-brand">
+                            <div class="product__price-item product__price-logo"
+                                style="background-image: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/d7cb3c110ef860cca3969ab0cd6c2ac9.png); ">
+                            </div>
+                            <div class="product__price-item product__price-slogan">Ở đâu rẻ hơn, IR hoàn tiền
+                            </div>
+                            <div class="product__price-item product__price-item--content">
+                                <i class="product__price-icon far fa-question-circle"></i>
+                                <div class="product-icon__arrow"></div>
+                                <div class="product__price-icon-content">
+                                    <a href="#" class="product__price-link">
+                                        Tìm được sản phẩm giá thấp hơn? Nhận voucher MIỄN PHÍ tại đây!
+                                        <i class="fas fa-angle-right"></i>
+                                    </a>
+                                    <span class="product-content">
+                                        THỂ LỆ CHƯƠNG TRÌNH "RẺ VÔ ĐỊCH! Ở ĐÂU RẺ HƠN, IR HOÀN TIỀN!"
+
+                                        Giới thiệu
+                                        IR cam kết đem đến cho bạn những sản phẩm với mức giá không đâu rẻ bằng. Nếu
+                                        bạn tìm thấy sản phẩm có giá thấp hơn giá sản phẩm bạn đã mua trên IR, hãy
+                                        thông báo, chúng tôi sẽ hoàn trả gấp đôi phần chênh lệch (có điều kiện áp dụng).
+
+
+
+
+                                        Phạm vi áp dụng
+
+                                        • Sản phẩm được áp dụng: thuộc chương trình “Rẻ vô địch – Ở đâu rẻ hơn, IR
+                                        hoàn tiền”
+
+                                        • Sản phẩm để so sánh: được bán tại top 10 trang Thương mại điện tử đang hoạt
+                                        động tại Việt Nam. Vui lòng liên hệ Tổng đài CSKH 19001221 để biết thêm chi
+                                        tiết.
+
+                                        •Giá của sản phẩm để so sánh là giá niêm yết công khai để khách hàng mua được
+                                        sản phẩm mới 100%, đầy đủ, nguyên vẹn, không bao gồm phí vận chuyển hay bất kì
+                                        loại phí nào; không áp dụng mã giảm giá hay bất kì hình thức giảm giá/ chiết
+                                        khấu nào khác
+
+
+                                        Cách thông báo cho IR
+
+                                        Gửi email tới Revodich@IR.vn với các thông tin sau:
+
+                                        - Tên tài khoản và Mã đơn hàng bạn đã mua trên IR
+
+                                        - Đường dẫn (link) của sản phẩm bạn muốn thông báo có giá thấp hơn tại Top 10
+                                        trang Thương mại điện tử đang hoạt động tại Việt Nam
+
+
+                                        Điều kiện để được hoàn tiền
+
+                                        • Bạn đã đặt mua và nhận được sản phẩm thuộc chương trình “ Rẻ vô địch – Ở đâu
+                                        rẻ hơn, IR hoàn tiền” trên IR và không có khiếu nại hay yêu cầu đổi/trả
+
+                                        • Bạn thông báo cho IR trong 07 ngày kể từ khi nhận hàng và chưa từng thông
+                                        báo về sản phẩm này trên IR trước đó
+
+                                        • Đường dẫn (link) sản phẩm trên các trang TMDT khác mà bạn thông báo vẫn còn
+                                        tồn tại, vẫn có thể mua hàng, đã có lượt mua thành công và giá không đổi trong
+                                        48h kể từ thời điểm bạn gửi thông báo đến IR
+
+                                        • Sản phẩm mà bạn thông báo là hàng mới 100%, có giá thấp hơn và hoàn toàn trùng
+                                        khớp với sản phẩm mà bạn đã mua trên IR
+
+
+                                        Cách thức IR hoàn tiền
+
+                                        • Quy trình: Sau khi bạn thông báo, IR sẽ xét duyệt thông tin bạn cung cấp.
+                                        Nếu đạt điều kiện hoàn tiền nêu trên, IR sẽ gửi Voucher (mã giảm giá) tương
+                                        đương với giá trị gấp 2 lần phần chênh lệch từ các kênh Thương mại điện tử khác
+                                        tới bạn qua thông báo trên ứng dụng IR. Mã có giá trị sử dụng trong vòng 30
+                                        ngày kể từ ngày IR thông báo.
+
+                                        • Thời gian gửi Voucher (nếu bạn đủ điều kiện): trong vòng 72 giờ kể từ ngày bạn
+                                        thông báo.
+
+
+
+                                        Lưu ý
+
+                                        • IR có quyền từ chối hoàn tiền nếu phát hiện khách hàng không trung thực và
+                                        lợi dụng chính sách của IR để trục lợi.
+
+                                        • Nhân viên/ Người nhà của người bán không được tham gia chương trình này.
+
+                                        • Người Mua chỉ có thể khiếu nại tối đa 3 lần/ngày và số tiền bồi thường mỗi lần
+                                        không quá 500,000VND. Người mua khiếu nại sản phẩm thành công tối đa 1 lần.
+
+                                        • Trong mọi trường hợp, quyết định của IR là quyết định cuối cùng.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__deal">
+                        <span class="product__deal-item">
+                            Deal Sốc
+                        </span>
+                        <span class="product__deal-item product__deal-item-buy">
+                            Mua kèm Deal Sốc
+                        </span>
+                    </div>
+                    <div class="product__coin">
+                        <div class="product__coin-item product__coin-heading">
+                            Xu
+                        </div>
+                        <div class="product__coin-item product__coin-middle">
+                            <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/a507d0e185dbd56e388652d8d8da845d.png"
+                                class="product__coin-item--img" alt="logo-coin">
+                            <p>Mua hàng và tích <span>600</span> IR Xu</p>
+                        </div>
+                        <div class="product__coin-item product__coin-icon">
+                            <i class="far fa-question-circle"></i>
+                            <span class="product__coin-item--content">Săn IR xu để sử dụng cho lần mua hàng tới. Mỗi
+                                1000 Xu thu được tương ứng với ₫1.000.</span>
+                        </div>
+                    </div>
+                    <div class="product__transport">
+                        <div class="product__transport-heading product__transport-item">
+                            Vận chuyển
+                        </div>
+                        <div class="product__transport-item">
+                            <div class="product__transport-free">
+                                <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/9d21899f3344277e34d40bfc08f60bc7.png"
+                                    class="product__transport-img" alt="" width="25px" height="15px">
+                                <div class="product__transport-item-content">
+                                    <p>Miễn phí vận chuyển</p>
+                                    <p>Miễn Phí Vận Chuyển khi đơn đạt giá trị tối thiểu</p>
+                                </div>
+                            </div>
+                            <div class="product__transport-free">
+                                <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/9d21899f3344277e34d40bfc08f60bc7.png"
+                                    class="product__transport-img" alt="" width="25px" height="15px">
+                                <div class="product__transport-item-content">
+                                    <div class="product__transport-local">
+                                        <p class="product__transport-text">Vận Chuyển Tới</p>
+                                        <a href="#" class="product__transport-local-link">Huyện Ba Vì, Hà Nội</a>
+                                        <label for="product__transport--checked">
+                                            <i
+                                                class="product__transport-icon product__transport-icon--local fas fa-angle-down"></i>
+                                        </label>
+                                        <input type="checkbox" id="product__transport--checked" hidden
+                                            class="product__transport-local-label">
+                                        <ul class="product__transport-local--list">
+                                            <input type="text" class="product__transport-local--search"
+                                                placeholder="Tìm">
+                                            <li class="product__transport-local--item">An Giang</li>
+                                            <li class="product__transport-local--item">Bà Rịa - Vũng Tàu</li>
+                                            <li class="product__transport-local--item">Bắc Kạn</li>
+                                            <li class="product__transport-local--item">Bắc Giang</li>
+                                            <li class="product__transport-local--item">Bạc Liêu</li>
+                                            <li class="product__transport-local--item">Vĩnh Phúc</li>
+                                            <li class="product__transport-local--item">Quảng Nam</li>
+                                            <li class="product__transport-local--item">Đà Nẵng</li>
+                                            <li class="product__transport-local--item">TP. Hồ Chí Minh</li>
+                                            <li class="product__transport-local--item">Hà Nội</li>
+                                            <li class="product__transport-local--item">Long An</li>
+                                            <li class="product__transport-local--item">Biên Hòa</li>
+                                            <li class="product__transport-local--item">An Giang</li>
+                                            <li class="product__transport-local--item">Bà Rịa - Vũng Tàu</li>
+                                            <li class="product__transport-local--item">Bắc Kạn</li>
+                                            <li class="product__transport-local--item">Bắc Giang</li>
+                                            <li class="product__transport-local--item">Bạc Liêu</li>
+                                            <li class="product__transport-local--item">Vĩnh Phúc</li>
+                                            <li class="product__transport-local--item">Quảng Nam</li>
+                                            <li class="product__transport-local--item">Đà Nẵng</li>
+                                            <li class="product__transport-local--item">TP. Hồ Chí Minh</li>
+                                            <li class="product__transport-local--item">Hà Nội</li>
+                                            <li class="product__transport-local--item">Long An</li>
+                                            <li class="product__transport-local--item">Biên Hòa</li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__transport-coin">
+                                        <p class="product__transport-text">Phí Vận Chuyển</p>
+                                        <span class="product__transport-coin-price">55.369đ-59.400đ</span>
+                                        <div class="product__transport-coin--content">
+                                            <i
+                                                class="product__transport-icon product__transport-icon--coin fas fa-angle-down"></i>
+                                            <div class="product__transport-coin--fast">
+                                                <h3>Vận chuyển nhanh</h3>
+                                                <ul class="product__transport-coin-list">
+                                                    <li class="product__transport-coin-item">
+                                                        <div
+                                                            class="product__transport-coin-content product__transport-coin-item-heading">
+                                                            <div class="product__transport-coin-item-name">VIETTEL POST
+                                                            </div>
+                                                            <div class="product__transport-coin-item-price">57.244đ
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="product__transport-coin-content product__transport-coin-item-date">
+                                                            Nhận hàng vào 17 Th03 - 19 Th03
+                                                        </div>
+                                                        <div
+                                                            class="product__transport-coin-content product__transport-coin-item-voucher">
+                                                            <span class="product__transport-coin-item-span">Miễn phí vận
+                                                                chuyển</span> cho đơn hàng từ <span
+                                                                class="product__transport-coin-item-span">150.000đ</span>(giảm
+                                                            tối đa <span
+                                                                class="product__transport-coin-item-span">30.000đ</span>)
+                                                        </div>
+                                                    </li>
+                                                    <li class="product__transport-coin-item">
+                                                        <div
+                                                            class="product__transport-coin-content product__transport-coin-item-heading">
+                                                            <div class="product__transport-coin-item-name">GIAO HÀNG
+                                                                NHANH</div>
+                                                            <div class="product__transport-coin-item-price">55.369đ
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="product__transport-coin-content product__transport-coin-item-date">
+                                                            Nhận hàng vào 17 Th03 - 18 Th03
+                                                        </div>
+                                                        <div
+                                                            class="product__transport-coin-content product__transport-coin-item-voucher">
+                                                            <span class="product__transport-coin-item-span">Miễn phí vận
+                                                                chuyển</span> cho đơn hàng từ <span
+                                                                class="product__transport-coin-item-span">150.000đ</span>(giảm
+                                                            tối đa <span
+                                                                class="product__transport-coin-item-span">30.000đ</span>)
+                                                        </div>
+                                                    </li>
+                                                    <li class="product__transport-coin-item">
+                                                        <div
+                                                            class="product__transport-coin-content product__transport-coin-item-heading">
+                                                            <div class="product__transport-coin-item-name">GIAO HÀNG
+                                                                TIẾT KIỆM</div>
+                                                            <div class="product__transport-coin-item-price">59.400đ
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="product__transport-coin-content product__transport-coin-item-date">
+                                                            Nhận hàng vào 17 Th03 - 18 Th03
+                                                        </div>
+                                                        <div
+                                                            class="product__transport-coin-content product__transport-coin-item-voucher">
+                                                            <span class="product__transport-coin-item-span">Miễn phí vận
+                                                                chuyển</span> cho đơn hàng từ <span
+                                                                class="product__transport-coin-item-span">150.000đ</span>(giảm
+                                                            tối đa <span
+                                                                class="product__transport-coin-item-span">30.000đ</span>)
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__variation">
+                        <div class="product__variation-heading">
+                            Variation
+                        </div>
+                        <div class="product__variation-type">
+                            <div class="product__variation-item">ĐEN</div>
+
+                            <div class="product__variation-item product__variation-item-big">XANH ĐEN</div>
+                            <div class="product__variation-item">ĐỎ</div>
+                        </div>
+                    </div>
+                    <div class="product__amount">
+                        <div class="product__amount-heading">
+                            Số Lượng
+                        </div>
+                        <div class="product__amount-content">
+                            <div class="product__amount-add-product">
+                                <button class="product__amount-item">-</button>
+                                <input type="text" value="1" class="product__amount-item product__amount-item-input">
+                                <button class="product__amount-item">+</button>
+                            </div>
+                            <div class="product__amount-product-available">
+                                930 sản phẩm có sẵn
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__cart-buy">
+                        <div class="product__cart-buy-item product__cart-buy-add">
+                            <i class="product__cart-buy-add-item fas fa-cart-plus"></i>
+                            Thêm vào giỏ hàng
+                        </div>
+                        <div class="product__cart-buy-item product__cart-buy-now">
+                            Mua ngay
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__footer-item">
+                            <div class="product__footer-item-img product__footer-item-left"
+                                style="background-image: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/7ff21e27ed225aa5be9e43569b076af8.png)">
+                            </div>
+                            7 ngày miễn phí trả hàng
+                        </div>
+                        <div class="product__footer-item">
+                            <div class="product__footer-item-img product__footer-item-middle"
+                                style="background-image: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/7ff21e27ed225aa5be9e43569b076af8.png)">
+                            </div>
+                            Hàng chính hãng 100%
+                        </div>
+                        <div class="product__footer-item">
+                            <div class="product__footer-item-img product__footer-item-right"
+                                style="background-image: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/7ff21e27ed225aa5be9e43569b076af8.png)">
+                            </div>
+                            Miễn phí vận chuyển
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid wide product__container">
+            <div class="row sm-gutter product-detail">
+                <div class="col l-9 product-detail-wrap">
+                    <div class="product-detail-wrapper">
+                        <div class="product-detail-title">
+                            <h1>Chi tiết sản phẩm</h1>
+
+                        </div>
+                        <div class="product-detail-item-wrap product-detail-category">
+                            <div class="product-detail-item product-detail-category-heading">Danh mục</div>
+                            <div class="product-detail-item-content product-detail-category-name">
+                                <ul class="product-detail-category-list">
+                                    <li class="product-detail-category-item">
+                                        <a href="" class="product-detail-category__link">IR</a>
+                                    </li>
+                                    <li class="product-detail-category-item">
+                                        <i class="product-detail-category-icon fas fa-angle-right"></i>
+                                        <a href="" class="product-detail-category__link">Điện máy</a>
+                                    </li>
+                                    <li class="product-detail-category-item">
+                                        <i class="product-detail-category-icon fas fa-angle-right"></i>
+                                        <a href="" class="product-detail-category__link">Sony Android TV 4K 49 </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-detail-item-wrap product-detail-brand">
+                            <div class="product-detail-item product-detail-brand-heading">
+                                Thương hiệu
+                            </div>
+                            <div class="product-detail-item-content product-detail-brand-name">
+                                <a href="#" class="product-detail-brand__link">Haras</a>
+                            </div>
+                        </div>
+                        <div class="product-detail-item-wrap product-detail-material">
+                            <div class="product-detail-item product-detail-material-heading">
+                                Chất liệu
+                            </div>
+                            <div class="product-detail-item-content product-detail-material-name">
+                                Polyester
+                            </div>
+                        </div>
+                        <div class="product-detail-item-wrap product-detail-item-origin">
+                            <div class="product-detail-item product-detail-item-origin-heading">
+                                Xuất xứ
+                            </div>
+                            <div class="product-detail-item-content product-detail-item-origin-name">
+                                Việt Nam
+                            </div>
+                        </div>
+                        <div class="product-detail-item-wrap product-detail-item-warehouse">
+                            <div class="product-detail-item product-detail-item-warehouse-heading">
+                                Kho hàng
+                            </div>
+                            <div class="product-detail-item-content product-detail-item-warehouse-number">
+                                930
+                            </div>
+                        </div>
+                        <div class="product-detail-item-wrap product-detail-item-send">
+                            <div class="product-detail-item product-detail-item-send-heading">
+                                Gửi từ
+                            </div>
+                            <div class="product-detail-item-content product-detail-item-send-address">
+                                Quận Thủ Đức, TP.Hồ Chí Minh
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="product-detail-wrapper">
+                        <div class="product-detail-title">
+                            <h1>Mô tả sản phẩm</h1>
+                        </div>
+                        <div class="product-detail-content">
+                            <p>GIỚI THIỆU SẢN PHẨM:
+                                Thông số kỹ thuật chi tiết Android Tivi Sony 4K 49 inch KD-49X8000G
+                                Tổng quan
+                                Loại Tivi:Android Tivi
+                                Kích cỡ màn hình:49 inch
+                                Độ phân giải:Ultra HD 4K
+                                Kết nối
+                                Bluetooth:Có (bàn phím, chuột, tay game)
+                                Kết nối Internet:Cổng LAN, Wifi
+                                Cổng AV:Có cổng Composite
+                                Cổng HDMI:4 cổng
+                                Cổng xuất âm thanh:Cổng Optical (Digital Audio Out), Jack loa 3.5 mm, HDMI ARC
+                                USB:3 cổng
+                                Tích hợp đầu thu kỹ thuật số:DVB-T2
+                                Tính năng thông minh (Cập nhật 3/2019)
+                                Hệ điều hành, giao diện:Android 8.0
+
+                                Kết nối không dây với điện thoại, máy tính bảng:Chiếu màn hình AirPlay qua ứng dụng
+                                AirScreen, Chiếu màn hình Chromecast, Chiếu màn hình Screen Mirroring
+                                Kết nối Bàn phím, chuột:Có
+                                Tính năng thông minh khác:Tìm kiếm bằng giọng nói (có hỗ trợ tiếng Việt), Trợ lý ảo
+                                Google Assistant
+                                Công nghệ hình ảnh, âm thanh
+                                Công nghệ hình ảnh:HLG, HDR10, 4K X-Reality PRO, Live Colour, TRILUMINOS Display,
+                                Dynamic Contrast Enhancer
+                                Tần số quét thực:50 Hz
+                                Công nghệ quét hình:Motionflow™ XR 200 Hz
+                                Công nghệ âm thanh:ClearAudio+, S-Force Front Surround
+                                Tổng công suất loa:20 W ( 2 loa mỗi loa 10 W )
+                                Thông tin chung
+                                Công suất:107 W
+                                Bộ nhớ trong:ROM 16 GB, RAM 2 GB
+                                Kích thước có chân, đặt bàn:Ngang 110.1 cm - Cao 70.4 cm - Dày 26 cm
+                                Khối lượng có chân:12.4 kg
+                                Kích thước không chân, treo tường:Ngang 110.1 cm - Cao 64.5 cm - Dày 5.7 cm
+                                Khối lượng không chân:11.8 kg
+                                Nơi sản xuất:Malaysia
+                                Dòng sản phẩm:2019
+                                Hãng:Sony. Xem thông tin hãng
+                        </div>
+                    </div>
+                </div>
+                <div class="col l-3 app__product">
+                    <!-- product hot sales -->
+                    <div class="product-hot-sales">
+                        <a href="index.html" class="product-hot-sales-wrapper">
+                            <div class="product-hot-sales-item">
+                                <h3>Top sản phẩm bán chạy</h3>
+                                <div class="product-hot-sales-img" style="background-image: url(./images/2.jpg)">
+                                </div>
+                                <div class="product-hot-sales-name">Electrolux Inverter 9.5 Kg</div>
+                                <div class="product-hot-sales-price">13.400.000₫</div>
+                            </div>
+                        </a>
+                        <a href="index.html" class="product-hot-sales-wrapper">
+                            <div class="product-hot-sales-item">
+                                <h3>Top sản phẩm bán chạy</h3>
+                                <div class="product-hot-sales-img" style="background-image: url(./images/3.jpg)">
+                                </div>
+                                <div class="product-hot-sales-name">Quạt điều hòa Midea AC375-19CRH</div>
+                                <div class="product-hot-sales-price">3.690.000₫</div>
+                            </div>
+                        </a>
+                        <a href="index.html" class="product-hot-sales-wrapper">
+                            <div class="product-hot-sales-item">
+                                <h3>Top sản phẩm bán chạy</h3>
+                                <div class="product-hot-sales-img" style="background-image: url(./images/4.jpg)">
+                                </div>
+                                <div class="product-hot-sales-name">Beko Inverter 188 lít</div>
+                                <div class="product-hot-sales-price">5.590.000₫</div>
+                            </div>
+                        </a>
+                        <a href="index.html" class="product-hot-sales-wrapper">
+                            <div class="product-hot-sales-item">
+                                <h3>Top sản phẩm bán chạy</h3>
+                                <div class="product-hot-sales-img" style="background-image: url(./images/5.jpg)">
+                                </div>
+                                <div class="product-hot-sales-name">Máy lọc nước RO Midea JN1648T 5 lõi</div>
+                                <div class="product-hot-sales-price">5.470.000₫</div>
+                            </div>
+                        </a>
+                        <a href="index.html" class="product-hot-sales-wrapper">
+                            <div class="product-hot-sales-item">
+                                <h3>Top sản phẩm bán chạy</h3>
+                                <div class="product-hot-sales-img" style="background-image: url(./images/6.jpg)">
+                                </div>
+                                <div class="product-hot-sales-name">Túi Đeo Chéo Chống Nước HARAS HR218</div>
+                                <div class="product-hot-sales-price">139.000đ</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer ">
+        <div class="grid wide footer__content">
+            <div class="row">
+                <div class="col l-2-4 m-4 c-6">
+                    <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Tuyển dụng</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <h3 class="footer__heading">Giới thiệu</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">TickID</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <h3 class="footer__heading">Danh mục</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Giới thiệu</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Tuyển dụng</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Chăm sóc khách hàng</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <h3 class="footer__heading">Theo dõi</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">
+                                <i class="footer-item__icon fab fa-facebook"></i>
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">
+                                <i class="footer-item__icon fab fa-instagram"></i>
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">
+                                <i class="footer-item__icon fab fa-linkedin"></i>
+                                Linkedin
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col l-2-4 m-8 c-12">
+                    <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+                    <div class="footer__dowlooad">
+                        <img src="./images/logo-qr.png" alt="logo-qr" class="footer__dowload-qr">
+                        <div class="footer__dowload-apps">
+                            <a href="" class="footer__dowload-apps-link">
+                                <img src="./images/qr-gg.png" alt="google play" class="footer__dowload-app-img">
+                            </a>
+                            <a href="" class="footer__dowload-apps-link">
+                                <img src="./images/qr-appstore.png" alt="app store" class="footer__dowload-app-img">
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="grid wide">
+                <p class="footer-text">© 2020 IR </p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js.js"></script>
+
+</html>
