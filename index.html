@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hope Shop</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+
+
     <link rel="SHUTCUT ICON" href="./images/icons8-online-shop-favorite-24.png">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/responsive.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese"
         rel="stylesheet">
@@ -31,19 +37,21 @@
                             Trang chủ
                             <!-- Header QR Code -->
                             <div class="header__qr">
-                                <img src="./images/logo-qr.png" alt="QR code" class="header__qr-img">
+                                <img src="./images/maQR.png" alt="QR code" class="header__qr-img">
                                 <div class="header__qr-apps">
-                                    <a href=""><img src="./images/qr-gg.png" alt="Google play"
-                                            class="header__qr-dowload-img"></a>
-                                    <a href=""><img src="./images/qr-appstore.png" alt="App store"
-                                            class="header__qr-dowload-img"></a>
+                                    <a href="" class="header__qr-link">
+                                        <img src="./images/google_play.png" alt="Google Play" class="header__qr-download-img">
+                                    </a>
+                                    <a href="" class="header__qr-link">
+                                        <img src="./images/app_store.png" alt="App Store" class="header__qr-download-img">
+                                    </a>
                                 </div>
                             </div>
                         </li>
                         <li class="header__navbar-item">
                             <span class="header__navbar-item-span">Kết nối</span>
                             <a href="" class="header__navbar-icon-link">
-                                <i class="header__navbar-icon fab fa-facebook"></i>
+                                <i class="header__navbar-icon fab fa-facebook-square"></i>
                             </a>
                             <a href="" class="header__navbar-icon-link">
                                 <i class="header__navbar-icon fab fa-instagram"></i>
@@ -171,34 +179,47 @@
                                 </li>
                                 <li class="header__search-option-item">
                                     <span>Ngoài Shop</span>
-                                    <i class="fas fa-check"></i>
                                 </li>
                             </ul>
                         </div>
                         <button class="header__search-btn">
                             <i class="header__search-btn-icon fas fa-search"></i>
                         </button>
+                        
                     </div>
 
 
 
-                    <!-- Cart layout -->
+                    <!-- Shopping Cart layout -->
                     <div class="header__cart">
-                        <div class="header__cart-wrap">
-                        <i class="header__cart-icon fas fa-shopping-cart"></i>
-                        <span class="header__cart-notice">3</span>
+                        <div class="header__cart-wrap">     
+                            <li class="cart">
+                                <a class="cart__link" href="./shopping-cart.html">
+                                    <i class="header__cart-icon fas fa-shopping-cart"></i>
+                                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div> -->
+                                </a>
+                            </li>
+                            <!-- <i class="header__cart-icon fas fa-shopping-cart" aria-hidden="true"></i> -->
+                                <!-- modal shopping cart -->
+                                <!-- The Modal -->
+                            
+
+
+
+
+                        <!-- <span class="header__cart-notice">3</span> -->
 
                         <!-- No cart: header__cart-list--no--cart -->
-                        <div class="header__cart-list  ">
+                        <!-- <div class="header__cart-list  ">
                             <img src="./images/no-cart.png" alt="" class="header__cart-no-cart-img">
                             <span class="header__cart-list-no-cart-msg">
                                 Không có sản phẩm
                             </span>
 
                             <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
-                            <ul class="header__cart-list-item">
+                            <ul class="header__cart-list-item"> -->
                                 <!-- Cart item -->
-                                <li class="header__card-item">
+                                <!-- <li class="header__card-item">
                                     <img src="./images/sp3.jpg" alt="" class="header__card-img">
                                     <div class="header__card-item-info">
                                         <div class="header__card-item-head">
@@ -328,15 +349,15 @@
 
                             <a class="header__card-view-cart btn btn--primary">
                                 Xem giỏ hàng
-                            </a>
+                            </a> -->
 
-                        </div>
                         </div>
                     </div>
-
-
                 </div>
+
+
             </div>
+
 
 
 
@@ -523,7 +544,7 @@
                     <!-- <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Registration</li>
                     <li class="header__navbar-item header__navbar-item--strong">Log in</li> -->
                     <li class="header__navbar-item header__navbar-user">
-                        <img src="./images/2HOxyNCQ.jpg" alt="" class="header__navbar-user-img">
+                        <img src="./images/14.jpg" alt="" class="header__navbar-user-img">
                         <span class="header__navbar-user-name">Hope Shop</span>
 
                         <ul class="header__navbar-user-menu">
@@ -722,17 +743,17 @@
                         </nav>
 
                         <div class="home-product">
-                            <div class="row sm-gutter">
+                            <div class="row sm-gutter" id="cart-items">
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
                                     <a href="product.html" class="home-product-item">
-                                        <div class="home-product-item__img"
-                                            style="background-image: url(./images/1.jpg);">
-                                        </div>
-                                        <h4 class="home-product-item__name">Sony Android TV 4K 49</h4>
+                                        
+                                            <img class="home-product-item__img shop-item-image" src="./images/1.jpg" alt="">
+
+                                        <h4 class="home-product-item__name content-product-h3 shop-item-title">Sony Android TV 4K 49</h4>
                                         <div class="home-product-item__price">
                                             <span class="home-product-item__price-old">15.400.000₫ </span>
-                                            <span class="home-product-item__price-current"> 12.400.000₫ </span>
+                                            <span class="home-product-item__price-current shop-item-price"> 12.400.000đ </span>
                                         </div>
                                         <div class="home-product-item__action">
                                             <span class="home-product-item__like home-product-item__like--liked ">
@@ -748,10 +769,7 @@
                                             </div>
                                             <span class="home-product-item__sold">50 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Local</span>
-                                            <span class="home-product-item__origin-name">Singapore</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -762,8 +780,14 @@
                                             <span
                                                 class="home-product-item__sale-off-move home-product-item__sale-off-label">GIẢM</span>
                                         </div>
-
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="1" data-name="Sony Android TV 4K 49" data-price="12400000" class="add-to-cart product-cart shop-item-button"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
+                                    
+                                    
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -790,10 +814,7 @@
                                             </div>
                                             <span class="home-product-item__sold">60 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -804,8 +825,13 @@
                                             <span
                                                 class="home-product-item__sale-off-move home-product-item__sale-off-label">GIẢM</span>
                                         </div>
-
+                                        
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="2" data-name="Electrolux Inverter 9.5 Kg" data-price="12800000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -832,10 +858,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -846,8 +869,13 @@
                                             <span
                                                 class="home-product-item__sale-off-move home-product-item__sale-off-label">GIẢM</span>
                                         </div>
-
+                                        
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="3" data-name="Quạt điều hòa Midea AC375-19CRH" data-price="2200000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -874,10 +902,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -888,8 +913,13 @@
                                             <span
                                                 class="home-product-item__sale-off-move home-product-item__sale-off-label">GIẢM</span>
                                         </div>
-
+                                        
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="4" data-name="Beko Inverter 188 lít" data-price="4900000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -916,10 +946,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -930,8 +957,13 @@
                                             <span
                                                 class="home-product-item__sale-off-move home-product-item__sale-off-label">GIẢM</span>
                                         </div>
-
+                                        
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="5" data-name="Máy lọc nước RO Midea JN1648T 5 lõi" data-price="3500000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -958,10 +990,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                   
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -974,6 +1003,11 @@
                                         </div>
 
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="6" data-name="LG Inverter 1 HP" data-price="8200000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -1000,10 +1034,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -1016,6 +1047,11 @@
                                         </div>
 
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="7" data-name="Samsung Inverter 8 Kg" data-price="6700000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -1042,10 +1078,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -1058,6 +1091,11 @@
                                         </div>
 
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="8" data-name="Midea Inverter 8.5 Kg" data-price="7000000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -1084,10 +1122,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -1100,6 +1135,11 @@
                                         </div>
 
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="9" data-name="Máy lọc không khí Midea KJ20FE-BD" data-price="3500000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -1127,10 +1167,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -1143,6 +1180,11 @@
                                         </div>
 
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="10" data-name="Nồi cơm điện Happycook 1.8 lít HCJ-1822" data-price="400000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -1169,10 +1211,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -1185,6 +1224,11 @@
                                         </div>
 
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="11" data-name="Samsung Inverter 1.5 HP" data-price="12400000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -1211,10 +1255,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -1227,6 +1268,11 @@
                                         </div>
 
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="12" data-name="Aqua Inverter 235 lít" data-price="6400000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -1253,10 +1299,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -1269,6 +1312,11 @@
                                         </div>
 
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="13" data-name="Quạt điều hoà Sunhouse SHD7713" data-price="2100000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -1296,10 +1344,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -1312,6 +1357,11 @@
                                         </div>
 
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="14" data-name="Máy lọc nước RO Daikiosan DXW-33009G 9 lõi" data-price="6800000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -1338,10 +1388,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -1354,6 +1401,11 @@
                                         </div>
 
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="15" data-name="LG Smart TV 4K 43" data-price="9400000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -1380,10 +1432,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -1396,6 +1445,11 @@
                                         </div>
 
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="16" data-name="Panasonic Inverter 188 lít" data-price="5400000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -1423,10 +1477,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -1439,6 +1490,11 @@
                                         </div>
 
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="17" data-name="Máy lọc không khí Samsung AX34R3020WW/SV" data-price="4400000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -1465,10 +1521,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -1481,6 +1534,11 @@
                                         </div>
 
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="18" data-name="Máy xay sinh tố Panasonic MX-GX1561WRA" data-price="1400000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -1508,10 +1566,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -1524,6 +1579,11 @@
                                         </div>
 
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="19" data-name="Nồi cơm điện tử Bluestone 1.5 lít RCB-5939" data-price="1400000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
                                 <div class="col l-2-4 m-4 c-6">
                                     <!-- Product item -->
@@ -1551,10 +1611,7 @@
                                             </div>
                                             <span class="home-product-item__sold">88 đã bán</span>
                                         </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Whoo</span>
-                                            <span class="home-product-item__origin-name">Nhật Bản</span>
-                                        </div>
+                                        
                                         <div class="home-product-item__favourite">
                                             <i class="fas fa-check"></i>
                                             <span>Yêu thích</span>
@@ -1567,6 +1624,11 @@
                                         </div>
 
                                     </a>
+                                    <div class="home-product-item__origin">
+                                        <!-- <span class="home-product-item__brand">Whoo</span> -->
+                                        <!-- <a href="#"  data-name="Lemon" data-price="5" class="add-to-cart product-cart">Thêm vào giỏ</a> -->
+                                        <button id="20" data-name="Quạt điều hoà Kangaroo KG50F79" data-price="2500000" class="add-to-cart product-cart"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                                    </div>
                                 </div>
 
 
@@ -1577,8 +1639,12 @@
                         </div>
 
                     </div>
+                    
+
+
                 </div>
             </div>
+
 
             <div class="grid wide">
                 <div class="banner">
@@ -2505,103 +2571,161 @@
             <footer class="footer">
                 <div class="grid wide footer__content">
                     <div class="row">
+    
                         <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Chăm sóc khách hàng</h3>
-                            <ul class="footer-list">
-                                <li class="footer-item">
-                                    <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                            <ul class="footer__list">
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-item__link">Trung tâm trợ giúp</a>
                                 </li>
-                                <li class="footer-item">
-                                    <a href="" class="footer-item__link">Tuyển dụng</a>
+                                <li class="footer__list-item">    
+                                    <a href="" class="footer__list-item__link">Tickid mail</a>
                                 </li>
-                                <li class="footer-item">
-                                    <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                                <li class="footer__list-item">    
+                                    <a href="" class="footer__list-item__link">Hướng dẫn mua hàng</a>
                                 </li>
                             </ul>
                         </div>
+    
                         <div class="col l-2-4 m-4 c-6">
-                            <h3 class="footer__heading">Giới thiệu</h3>
-                            <ul class="footer-list">
-                                <li class="footer-item">
-                                    <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                            <h3 class="footer__heading">Về Tickid</h3>
+                            <ul class="footer__list"> 
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-item__link">Giới thiệu về tickid việt nam</a>
                                 </li>
-                                <li class="footer-item">
-                                    <a href="" class="footer-item__link">TickID</a>
+                                <li class="footer__list-item">    
+                                    <a href="" class="footer__list-item__link">Tuyển dụng</a>
                                 </li>
-                                <li class="footer-item">
-                                    <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
-                                </li>
+                                <li class="footer__list-item">    
+                                    <a href="" class="footer__list-item__link">Điều khoản</a>
+                                </li> 
                             </ul>
                         </div>
+    
                         <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Danh mục</h3>
-                            <ul class="footer-list">
-                                <li class="footer-item">
-                                    <a href="" class="footer-item__link">Giới thiệu</a>
+                            <ul class="footer__list"> 
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-item__link">Mua bán</a>
                                 </li>
-                                <li class="footer-item">
-                                    <a href="" class="footer-item__link">Tuyển dụng</a>
+                                <li class="footer__list-item">    
+                                    <a href="" class="footer__list-item__link">Phân phối</a>
                                 </li>
-                                <li class="footer-item">
-                                    <a href="" class="footer-item__link">Chăm sóc khách hàng</a>
-                                </li>
+                                <li class="footer__list-item">    
+                                    <a href="" class="footer__list-item__link">Giá cả</a>
+                                </li> 
                             </ul>
                         </div>
+    
                         <div class="col l-2-4 m-4 c-6">
-                            <h3 class="footer__heading">Theo dõi</h3>
-                            <ul class="footer-list">
-                                <li class="footer-item">
-                                    <a href="" class="footer-item__link">
-                                        <i class="footer-item__icon fab fa-facebook"></i>
+                            <h3 class="footer__heading">Theo dõi chúng tôi</h3>
+                            
+                            <ul class="footer__list">
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-item__link">
+                                        <i class="footer__list-item__icon fab fa-facebook"></i>
                                         Facebook
                                     </a>
                                 </li>
-                                <li class="footer-item">
-                                    <a href="" class="footer-item__link">
-                                        <i class="footer-item__icon fab fa-instagram"></i>
-                                        Instagram
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-item__link">
+                                        <i class="footer__list-item__icon fab fa-instagram"></i>
+                                        Instargam
                                     </a>
                                 </li>
-                                <li class="footer-item">
-                                    <a href="" class="footer-item__link">
-                                        <i class="footer-item__icon fab fa-linkedin"></i>
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-item__link">
+                                        <i class="footer__list-item__icon fab fa-linkedin"></i>
                                         Linkedin
                                     </a>
                                 </li>
                             </ul>
                         </div>
-                        <div class="col l-2-4 m-8 c-12">
+    
+                        <div class="col l-2-4 m-4 c-12">
                             <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
-                            <div class="footer__dowlooad">
-                                <img src="./images/logo-qr.png" alt="logo-qr" class="footer__dowload-qr">
-                                <div class="footer__dowload-apps">
-                                    <a href="" class="footer__dowload-apps-link">
-                                        <img src="./images/qr-gg.png" alt="google play" class="footer__dowload-app-img">
+                            <div class="footer__download">
+                                <img class="footer__download-qr" src="file:///F:/Study/Visual%20Studio%20Code/F8/TemplateLongjs/images/maQR.png" alt="">
+                                <div class="footer__download-apps">
+                                    <a href="" class="footer__download-app-link">
+                                        <img src="file:///F:/Study/Visual%20Studio%20Code/F8/TemplateLongjs/images/google_play.png" alt="" class="footer__download-app-img">
                                     </a>
-                                    <a href="" class="footer__dowload-apps-link">
-                                        <img src="./images/qr-appstore.png" alt="app store"
-                                            class="footer__dowload-app-img">
+                                    <a href="" class="footer__download-app-link">
+                                        <img src="file:///F:/Study/Visual%20Studio%20Code/F8/TemplateLongjs/images/app_store.png" alt="" class="footer__download-app-img">
                                     </a>
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="footer__bottom">
+    
                     <div class="grid wide">
-                        <p class="footer-text">© 2020 IR </p>
+                        <div class="footer__bottom-heading">
+                            <ul class="footer__bottom-heading-label">
+                                <li class="footer__bottom-heading-label-link">
+                                    <a href="" class="footer__bottom-heading-label-linka ">Chính sách bảo mật</a>
+                                </li>
+                                <li class="footer__bottom-heading-label-product">
+                                    <a href="" class="footer__bottom-heading-label-linka">Quy chế hoạt động</a>
+                                </li>
+                                <li class="footer__bottom-heading-label-product">
+                                    <a href="" class="footer__bottom-heading-label-linka">Chính sách vận chuyển</a>
+                                </li>
+                                <li class="footer__bottom-heading-label-product">
+                                    <a href="" class="footer__bottom-heading-label-linka">Chính sách trả hàng và hoàn tiền</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__bottom-logo">
+                            <img class="footer__bottom-logo-img" src="./images/icons8-online-shop-favorite-36.png" alt="">
+                        </div>
+                        <div class="footer__text">
+                            <p class="footer__text-info">Công ty trách nhiệm hữu hạn 4 thành viên </p>
+                            <p class="footer__text-info">Hope Shop</p>
+                            <p class="footer__text-info">@ 2020 - Bản quyền thuộc về Công ty H.S </p>
+                        </div>
                     </div>
+                    <!-- <a class="rgba" href="#">♥ THẢO NGUYÊN ♥</a> -->
                 </div>
             </footer>
+
+    
         </div>
     </div>
     <div class="scrolltotop">
         <img src="./images/icons8-upward-arrow-60.png" alt="">
     </div>
+
+
+
+     <!-- Modal -->
+<!-- <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="show-cart table">
+            
+          </table>
+          <div>Total price: $<span class="total-cart"></span></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Order now</button>
+        </div>
+      </div>
+    </div>
+  </div>  -->
+  
 </body>
 
-<script src="js.js"></script>
-
+<script src="./js.js"></script>
+<script src="./shopping-cart.js"></script>
 
 </html>

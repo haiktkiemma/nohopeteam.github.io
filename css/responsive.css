@@ -52,6 +52,9 @@
     .header__cart{
         width: unset;
     }
+    .header__cart-wrap{
+        margin-right: 10px;
+    }
     .header__search{
         position: fixed;
         top: var(--header-height);
@@ -96,7 +99,7 @@
         display: block;
     }
     .header__logo-img{
-        width: 110px;
+        
     }
     .footer__content{
         padding: 0 16px;

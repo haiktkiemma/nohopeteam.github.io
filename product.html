@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chi tiết sản phẩm</title>
-    <link rel="shortcut icon" type="image/png" href="./images/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="./images/icons8-online-shop-favorite-24.png" />
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/product.css">
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
+
     <link rel="stylesheet" href="./fa/css/all.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </head>
@@ -23,24 +24,27 @@
     <header class="header header__change">
         <div class="grid wide">
             <nav class="header__navbar hide-on-mobile-tablet">
+
                 <ul class="header__navbar-list">
                     <li class="header__navbar-item header__navbar-item--has-qr  header__navbar-item--separate">
-                        Vào cửa hàng trên ứng dụng của tui
+                        <a class="header__navbar-item--link" href="./index.html"> Trang chủ</a>
+                        <!-- Header QR Code -->
                         <!-- Header QR Code -->
                         <div class="header__qr">
-                            <img src="./images/logo-qr.png" alt="QR code" class="header__qr-img">
+                            <img src="./images/maQR.png" alt="QR code" class="header__qr-img">
                             <div class="header__qr-apps">
-                                <a href=""><img src="./images/qr-gg.png" alt="Google play"
-                                        class="header__qr-dowload-img"></a>
-                                <a href=""><img src="./images/qr-appstore.png" alt="App store"
-                                        class="header__qr-dowload-img"></a>
+                                <a href="" class="header__qr-link">
+                                    <img src="./images/google_play.png" alt="Google Play" class="header__qr-download-img">
+                                </a>
+                                <a href="" class="header__qr-link">
+                                    <img src="./images/app_store.png" alt="App Store" class="header__qr-download-img">
+                                </a>
                             </div>
                         </div>
                     </li>
-                    <li class="header__navbar-item">
-                        <span class="header__navbar-item-span">Kết nối</span>
+                    <li class="header__navbar-item"><span class="header__navbar--no-pointer">Kết nối</span>
                         <a href="" class="header__navbar-icon-link">
-                            <i class="header__navbar-icon fab fa-facebook"></i>
+                            <i class="header__navbar-icon fab fa-facebook-square"></i>
                         </a>
                         <a href="" class="header__navbar-icon-link">
                             <i class="header__navbar-icon fab fa-instagram"></i>
@@ -57,12 +61,22 @@
                         <a href="" class="header__navbar-item-link"><i
                                 class="header__navbar-icon far fa-question-circle"></i>Trợ giúp</a>
                     </li>
-                    <li
+
+                    <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">
+                        <a class="login" href="./regis.html">Đăng ký</a>
+                        </li>
+                    <li class="header__navbar-item header__navbar-item--strong">
+                        <a class="regis" href="./login-re.html">Đăng nhập</a>
+                        </li>
+
+
+                        <!-- Xóa class bên css -->
+                    <!-- <li
                         class="header__navbar-item header__navbar-item--strong header__navbar-item--separate header__navbar-item--register">
                         Đăng ký
                     </li>
                     <li class="header__navbar-item header__navbar-item--strong header__navbar-item--logIn">Đăng nhập
-                    </li>
+                    </li> -->
                 </ul>
             </nav>
             <!-- header with search -->
@@ -71,9 +85,8 @@
                     <i class="header__mobile-search-icon fas fa-search"></i>
                 </label>
                 <div class="header__logo hide-on-tablet">
-                    <a href="./index.html">
-                        <img src="./images/logo.png" alt="logo" width="160px" ; height="80px">
-                    </a>
+                        <div class="header__logo-img"><img src="./images/icons8-online-shop-favorite-48.png" alt=""></div>
+                        <div class="header__logo-text">HopeShop</div>
                 </div>
 
                 <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
@@ -106,7 +119,7 @@
                             </li>
                             <li class="header__search-option-item">
                                 <span>Ngoài Shop</span>
-                                <i class="fas fa-check"></i>
+                                
                             </li>
                         </ul>
                     </div>
@@ -114,13 +127,163 @@
                         <i class="header__search-btn-icon fas fa-search"></i>
                     </button>
                 </div>
+
+
+
+                <!-- Cart layout -->
                 <div class="header__cart">
-                    <i class="header__cart-icon fas fa-shopping-cart">
-                        <div class="header__cart-no-product">
-                            <img class="header__cart-img" src="./images/no-cart.png" alt="">
-                            <h2>Chưa có sản phẩm</h2>
-                        </div>
-                    </i>
+                    <div class="header__cart-wrap">
+                        <a class="cart__link" href="./shopping-cart.html">
+                            <i class="header__cart-icon fas fa-shopping-cart"></i>
+                            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div> -->
+                        </a>
+                    <!-- <span class="header__cart-notice">3</span> -->
+
+                    <!-- No cart: header__cart-list--no--cart -->
+                    <!-- <div class="header__cart-list  ">
+                        <img src="./images/no-cart.png" alt="" class="header__cart-no-cart-img">
+                        <span class="header__cart-list-no-cart-msg">
+                            Không có sản phẩm
+                        </span>
+
+                        <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                        <ul class="header__cart-list-item">
+                            
+                            <li class="header__card-item">
+                                <img src="./images/vin5.png" alt="" class="header__card-img">
+                                <div class="header__card-item-info">
+                                    <div class="header__card-item-head">
+                                        <h5 class="header__card-item-name">Bộ kem đặc trị vùng mắt Bộ kem đặc trị vùng mắt Bộ kem đặc trị vùng mắt</h5>
+                                        <div class="header__cart-item-price-wrap">
+                                            <span class="header__card-item-price">2.070.000đ</span>
+                                            <span class="header__card-item-multiply">x</span>
+                                            <span class="header__card-item-quantity">2</span>
+                                        </div>
+                                    </div>
+                                    <div class="header__card-item-body">
+                                        <span class="header__card-item-dexription">
+                                            Phân loại: Bạc
+                                        </span>
+                                        <span class="header__card-item-remove">
+                                            Xóa
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header__card-item">
+                                <img src="./images/vin5.png" alt="" class="header__card-img">
+                                <div class="header__card-item-info">
+                                    <div class="header__card-item-head">
+                                        <h5 class="header__card-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                        <div class="header__cart-item-price-wrap">
+                                            <span class="header__card-item-price">2.070.000đ</span>
+                                            <span class="header__card-item-multiply">x</span>
+                                            <span class="header__card-item-quantity">2</span>
+                                        </div>
+                                    </div>
+                                    <div class="header__card-item-body">
+                                        <span class="header__card-item-dexription">
+                                            Phân loại: Bạc
+                                        </span>
+                                        <span class="header__card-item-remove">
+                                            Xóa
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header__card-item">
+                                <img src="./images/vin5.png" alt="" class="header__card-img">
+                                <div class="header__card-item-info">
+                                    <div class="header__card-item-head">
+                                        <h5 class="header__card-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                        <div class="header__cart-item-price-wrap">
+                                            <span class="header__card-item-price">2.070.000đ</span>
+                                            <span class="header__card-item-multiply">x</span>
+                                            <span class="header__card-item-quantity">2</span>
+                                        </div>
+                                    </div>
+                                    <div class="header__card-item-body">
+                                        <span class="header__card-item-dexription">
+                                            Phân loại: Bạc
+                                        </span>
+                                        <span class="header__card-item-remove">
+                                            Xóa
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header__card-item">
+                                <img src="./images/vin5.png" alt="" class="header__card-img">
+                                <div class="header__card-item-info">
+                                    <div class="header__card-item-head">
+                                        <h5 class="header__card-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                        <div class="header__cart-item-price-wrap">
+                                            <span class="header__card-item-price">2.070.000đ</span>
+                                            <span class="header__card-item-multiply">x</span>
+                                            <span class="header__card-item-quantity">2</span>
+                                        </div>
+                                    </div>
+                                    <div class="header__card-item-body">
+                                        <span class="header__card-item-dexription">
+                                            Phân loại: Bạc
+                                        </span>
+                                        <span class="header__card-item-remove">
+                                            Xóa
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header__card-item">
+                                <img src="./images/vin5.png" alt="" class="header__card-img">
+                                <div class="header__card-item-info">
+                                    <div class="header__card-item-head">
+                                        <h5 class="header__card-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                        <div class="header__cart-item-price-wrap">
+                                            <span class="header__card-item-price">2.070.000đ</span>
+                                            <span class="header__card-item-multiply">x</span>
+                                            <span class="header__card-item-quantity">2</span>
+                                        </div>
+                                    </div>
+                                    <div class="header__card-item-body">
+                                        <span class="header__card-item-dexription">
+                                            Phân loại: Bạc
+                                        </span>
+                                        <span class="header__card-item-remove">
+                                            Xóa
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header__card-item">
+                                <img src="./images/vin5.png" alt="" class="header__card-img">
+                                <div class="header__card-item-info">
+                                    <div class="header__card-item-head">
+                                        <h5 class="header__card-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                        <div class="header__cart-item-price-wrap">
+                                            <span class="header__card-item-price">2.070.000đ</span>
+                                            <span class="header__card-item-multiply">x</span>
+                                            <span class="header__card-item-quantity">2</span>
+                                        </div>
+                                    </div>
+                                    <div class="header__card-item-body">
+                                        <span class="header__card-item-dexription">
+                                            Phân loại: Bạc
+                                        </span>
+                                        <span class="header__card-item-remove">
+                                            Xóa
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <a class="header__card-view-cart btn btn--primary">
+                            Xem giỏ hàng
+                        </a>
+
+                    </div> -->
+                  
+                </div>
                 </div>
             </div>
         </div>
@@ -139,9 +302,9 @@
             </li>
         </ul>
         <!-- modal -->
-        <div class="header__overlay"></div>
+        <!-- <div class="header__overlay"></div> -->
         <!-- header register -->
-        <div class="header__navbar-register header__navbar-form">
+        <!-- <div class="header__navbar-register header__navbar-form">
             <div class="register__content">
                 <div class="register__heading">
 
@@ -178,9 +341,9 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
         <!-- header log in -->
-        <div class="header__navbar-logIn  header__navbar-form">
+        <!-- <div class="header__navbar-logIn  header__navbar-form">
             <div class="logIn__content">
                 <div class="logIn__heading">
                     <div class="logIn__heading-item">
@@ -219,7 +382,7 @@
 
 
             </div>
-        </div>
+        </div> -->
     </header>
 
     <div class="app__container app-content">
@@ -607,9 +770,9 @@
                         </div>
                         <div class="product__amount-content">
                             <div class="product__amount-add-product">
-                                <button class="product__amount-item">-</button>
-                                <input type="text" value="1" class="product__amount-item product__amount-item-input">
-                                <button class="product__amount-item">+</button>
+                                <button onclick="clickCounterr()" class="product__amount-item">-</button>
+                                <div class="product-number" id="result">1</div>
+                                <button onclick="clickCounter()" class="product__amount-item">+</button>
                             </div>
                             <div class="product__amount-product-available">
                                 930 sản phẩm có sẵn
@@ -617,7 +780,7 @@
                         </div>
                     </div>
                     <div class="product__cart-buy">
-                        <div class="product__cart-buy-item product__cart-buy-add">
+                        <div id="1" data-name="Sony Android TV 4K 49" data-price="12400000" class="add-to-cart product__cart-buy-item product__cart-buy-add">
                             <i class="product__cart-buy-add-item fas fa-cart-plus"></i>
                             Thêm vào giỏ hàng
                         </div>
@@ -816,95 +979,128 @@
             </div>
         </div>
     </div>
-    <footer class="footer ">
+
+
+
+    <footer class="footer">
         <div class="grid wide footer__content">
             <div class="row">
+
                 <div class="col l-2-4 m-4 c-6">
                     <h3 class="footer__heading">Chăm sóc khách hàng</h3>
-                    <ul class="footer-list">
-                        <li class="footer-item">
-                            <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a href="" class="footer__list-item__link">Trung tâm trợ giúp</a>
                         </li>
-                        <li class="footer-item">
-                            <a href="" class="footer-item__link">Tuyển dụng</a>
+                        <li class="footer__list-item">    
+                            <a href="" class="footer__list-item__link">Tickid mail</a>
                         </li>
-                        <li class="footer-item">
-                            <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                        <li class="footer__list-item">    
+                            <a href="" class="footer__list-item__link">Hướng dẫn mua hàng</a>
                         </li>
                     </ul>
                 </div>
+
                 <div class="col l-2-4 m-4 c-6">
-                    <h3 class="footer__heading">Giới thiệu</h3>
-                    <ul class="footer-list">
-                        <li class="footer-item">
-                            <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                    <h3 class="footer__heading">Về Tickid</h3>
+                    <ul class="footer__list"> 
+                        <li class="footer__list-item">
+                            <a href="" class="footer__list-item__link">Giới thiệu về tickid việt nam</a>
                         </li>
-                        <li class="footer-item">
-                            <a href="" class="footer-item__link">TickID</a>
+                        <li class="footer__list-item">    
+                            <a href="" class="footer__list-item__link">Tuyển dụng</a>
                         </li>
-                        <li class="footer-item">
-                            <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
-                        </li>
+                        <li class="footer__list-item">    
+                            <a href="" class="footer__list-item__link">Điều khoản</a>
+                        </li> 
                     </ul>
                 </div>
+
                 <div class="col l-2-4 m-4 c-6">
                     <h3 class="footer__heading">Danh mục</h3>
-                    <ul class="footer-list">
-                        <li class="footer-item">
-                            <a href="" class="footer-item__link">Giới thiệu</a>
+                    <ul class="footer__list"> 
+                        <li class="footer__list-item">
+                            <a href="" class="footer__list-item__link">Mua bán</a>
                         </li>
-                        <li class="footer-item">
-                            <a href="" class="footer-item__link">Tuyển dụng</a>
+                        <li class="footer__list-item">    
+                            <a href="" class="footer__list-item__link">Phân phối</a>
                         </li>
-                        <li class="footer-item">
-                            <a href="" class="footer-item__link">Chăm sóc khách hàng</a>
-                        </li>
+                        <li class="footer__list-item">    
+                            <a href="" class="footer__list-item__link">Giá cả</a>
+                        </li> 
                     </ul>
                 </div>
+
                 <div class="col l-2-4 m-4 c-6">
-                    <h3 class="footer__heading">Theo dõi</h3>
-                    <ul class="footer-list">
-                        <li class="footer-item">
-                            <a href="" class="footer-item__link">
-                                <i class="footer-item__icon fab fa-facebook"></i>
+                    <h3 class="footer__heading">Theo dõi chúng tôi</h3>
+                    
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a href="" class="footer__list-item__link">
+                                <i class="footer__list-item__icon fab fa-facebook"></i>
                                 Facebook
                             </a>
                         </li>
-                        <li class="footer-item">
-                            <a href="" class="footer-item__link">
-                                <i class="footer-item__icon fab fa-instagram"></i>
-                                Instagram
+                        <li class="footer__list-item">
+                            <a href="" class="footer__list-item__link">
+                                <i class="footer__list-item__icon fab fa-instagram"></i>
+                                Instargam
                             </a>
                         </li>
-                        <li class="footer-item">
-                            <a href="" class="footer-item__link">
-                                <i class="footer-item__icon fab fa-linkedin"></i>
+                        <li class="footer__list-item">
+                            <a href="" class="footer__list-item__link">
+                                <i class="footer__list-item__icon fab fa-linkedin"></i>
                                 Linkedin
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="col l-2-4 m-8 c-12">
-                    <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
-                    <div class="footer__dowlooad">
-                        <img src="./images/logo-qr.png" alt="logo-qr" class="footer__dowload-qr">
-                        <div class="footer__dowload-apps">
-                            <a href="" class="footer__dowload-apps-link">
-                                <img src="./images/qr-gg.png" alt="google play" class="footer__dowload-app-img">
-                            </a>
-                            <a href="" class="footer__dowload-apps-link">
-                                <img src="./images/qr-appstore.png" alt="app store" class="footer__dowload-app-img">
-                            </a>
 
+                <div class="col l-2-4 m-4 c-12">
+                    <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+                    <div class="footer__download">
+                        <img class="footer__download-qr" src="file:///F:/Study/Visual%20Studio%20Code/F8/TemplateLongjs/images/maQR.png" alt="">
+                        <div class="footer__download-apps">
+                            <a href="" class="footer__download-app-link">
+                                <img src="file:///F:/Study/Visual%20Studio%20Code/F8/TemplateLongjs/images/google_play.png" alt="" class="footer__download-app-img">
+                            </a>
+                            <a href="" class="footer__download-app-link">
+                                <img src="file:///F:/Study/Visual%20Studio%20Code/F8/TemplateLongjs/images/app_store.png" alt="" class="footer__download-app-img">
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer__bottom">
+
             <div class="grid wide">
-                <p class="footer-text">© 2020 IR </p>
+                <div class="footer__bottom-heading">
+                    <ul class="footer__bottom-heading-label">
+                        <li class="footer__bottom-heading-label-link">
+                            <a href="" class="footer__bottom-heading-label-linka ">Chính sách bảo mật</a>
+                        </li>
+                        <li class="footer__bottom-heading-label-product">
+                            <a href="" class="footer__bottom-heading-label-linka">Quy chế hoạt động</a>
+                        </li>
+                        <li class="footer__bottom-heading-label-product">
+                            <a href="" class="footer__bottom-heading-label-linka">Chính sách vận chuyển</a>
+                        </li>
+                        <li class="footer__bottom-heading-label-product">
+                            <a href="" class="footer__bottom-heading-label-linka">Chính sách trả hàng và hoàn tiền</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__bottom-logo">
+                    <img class="footer__bottom-logo-img" src="./images/icons8-online-shop-favorite-36.png" alt="">
+                </div>
+                <div class="footer__text">
+                    <p class="footer__text-info">Công ty trách nhiệm hữu hạn 4 thành viên </p>
+                    <p class="footer__text-info">Hope Shop</p>
+                    <p class="footer__text-info">@ 2020 - Bản quyền thuộc về Công ty H.S </p>
+                </div>
             </div>
+            <!-- <a class="rgba" href="#">♥ THẢO NGUYÊN ♥</a> -->
         </div>
     </footer>
 </body>

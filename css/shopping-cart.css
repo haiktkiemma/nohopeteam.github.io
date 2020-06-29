@@ -1,0 +1,51 @@
+
+  .header__navbar-link--home{
+      text-decoration: none;
+      color: var(--white-color);
+      font-size: 1.4rem;
+  }
+  .header__navbar-link--home:hover{
+    text-decoration: none;
+    color: var(--white-color);
+  }
+  body {
+    margin: 20px;
+}
+
+.shopping-cart{
+  margin-bottom: 50px;
+}
+
+.wrapper {
+    width: 1140px;
+    margin: 0 auto;
+}
+.shopping-cart-main{
+  margin: 50px 100px 0px;
+}
+.table-title{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 1.5rem;
+}
+.btn-clear{
+  display: flex;
+  color: white;
+}
+.btn-clear-click{
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  border: 1px solid var(--white-color);
+  transition: 0.3s;
+  width: 200px;
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+.btn-clear-click:hover{
+  background-color: white;
+  color: var(--primary-color);
+  transition: 0.3s;
+  border: 1px solid var(--primary-color);
+}
+
