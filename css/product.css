@@ -6,6 +6,17 @@
     margin-top: -10px;
 }
 
+.header__logo-text{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    color: var(--white-color);
+    margin: 0px 5px 0;
+    cursor: pointer;
+    font-family: 'Recursive', sans-serif;
+  }
+
 /* link trang chu */
 .header__navbar-item--link{
     text-decoration: none;

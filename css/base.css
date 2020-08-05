@@ -157,16 +157,15 @@ html {
   display: flex;
   margin-top: 30px;
 }
-.banner__itemLeft-img {
-  margin-left: -12px;
-}
+
 .banner__itemLeft {
-  margin-left: -2px;
+  border-radius: 5px;
 }
 .banner__itemRight {
-  margin-left: -100px;
+  margin-left: -80px;
   width: 388px;
-  height: 111px;
+  height: 139px;
+  border-radius: 5px;
 }
 .search__heading,
 .suggestions__heading {
@@ -174,7 +173,6 @@ html {
   align-items: center;
   justify-content: space-between;
   padding: 16px;
-  border-bottom: 1px solid #939393;
   background-color: #f5f5f5;
 }
 

@@ -81,9 +81,12 @@ console.log("alo");
         if (sessionStorage["shopping-cart-items"] != null) {
             shoppingCartItems = JSON.parse(sessionStorage["shopping-cart-items"].toString());
         }
-
         // Hiển thị thông tin từ giỏ hàng
+      
+
         displayShoppingCartItems();
+        
+
     });
 
 
@@ -92,7 +95,7 @@ console.log("alo");
         var button = $(this); // Lấy đối tượng button mà người dùng click
         var id = button.attr("id"); // id của sản phẩm là id của button
         var name = button.attr("data-name"); // name của sản phẩm là thuộc tính data-name của button
-        var price = button.attr("data-price"); // price của sản phẩm là thuộc tính data-price của button
+        var price =  button.attr("data-price"); // price của sản phẩm là thuộc tính data-price của button
         var img = button.attr("image")
         var quantity = 1; // Số lượng
 
@@ -143,6 +146,7 @@ console.log("alo");
 
             $("#table-products > tbody").html("");
             // Duyệt qua mảng shoppingCartItems để append từng item dòng vào table
+
             $.each(shoppingCartItems, function (index, item) {
                 var htmlString = "";
                 htmlString += "<tr>";
@@ -151,10 +155,44 @@ console.log("alo");
                 htmlString += "<td style='text-align: right'>" + item.price + "</td>";
                 htmlString += "<td style='text-align: right'>" + item.quantity + "</td>";
                 htmlString += "<td style='text-align: right'>" + item.price * item.quantity + "</td>";
+                
+                
                 htmlString += "</tr>";
-
+               
+                  
+                
                 $("#table-products > tbody:last").append(htmlString);
+                
 
             });
         }
     }
+
+    // Tổng giá tiền 
+function getvalue(value){
+    var x=10;
+    x++;
+    x+=x;
+
+    var data = Math.random();
+    var data1 = value;
+    localStorage.setItem(data,data1);
+    
+        
+    
+}
+function deletelocal(){
+    localStorage.clear();
+    location.reload();
+    return false;
+
+}
+for(var i = 0;i<localStorage.length;i++ ){
+    document.getElementById("showdata").value += "+" + localStorage.getItem(localStorage.key(i)) ;
+    var exp = document.getElementById("showdata").value;
+
+    if(exp){
+        document.getElementById("showdata").value = eval(exp) ;
+    }  
+}
+
